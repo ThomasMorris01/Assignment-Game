@@ -24,7 +24,7 @@ public class FollowPlayer : Physics2DObject
 		// Find the player in the scene and store a reference for later use
 		playerTransform = GameObject.FindGameObjectWithTag(targetPlayer.ToString()).transform;
 	}
-	
+
 	// FixedUpdate is called once per frame
 	void FixedUpdate ()
 	{
