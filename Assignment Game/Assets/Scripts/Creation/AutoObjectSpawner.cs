@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//[RequireComponent(typeof(BoxCollider2D))]
 public class AutoObjectSpawner : MonoBehaviour
 {
 	[Header("Object creation")]
@@ -15,11 +14,8 @@ public class AutoObjectSpawner : MonoBehaviour
 	public float spawnInterval = 1;
 	public int maxObjects;
 
-	private BoxCollider2D boxCollider2D;
-
 	void Start ()
 	{
-		boxCollider2D = GetComponent<BoxCollider2D>();
 
 		StartCoroutine(SpawnObject());
 	}
@@ -32,14 +28,10 @@ public class AutoObjectSpawner : MonoBehaviour
 		// Counts if the object is under the max amount of objects spawned
 		while(objectCount < maxObjects)
 		{
-			// Create some random numbers
-			float randomX = Random.Range (-boxCollider2D.size.x, boxCollider2D.size.x) *.5f;
-			float randomY = Random.Range (-boxCollider2D.size.y, boxCollider2D.size.y) *.5f;
-
 			// Generate the new object
 			GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
 			// Set the position of the spawned object
-			newObject.transform.position = new Vector2(50, -8);
+			newObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
 			// Count them to ensure they don't go over the max amount of objects spawned
 			objectCount = objectCount + 1; 
 
