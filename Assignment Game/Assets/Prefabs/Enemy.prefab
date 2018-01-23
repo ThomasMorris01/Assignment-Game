@@ -23,9 +23,8 @@ GameObject:
   - component: {fileID: 61651148986494348}
   - component: {fileID: 50591514050274750}
   - component: {fileID: 114427663140587236}
-  - component: {fileID: 114628673277768950}
-  - component: {fileID: 114439806730397394}
   - component: {fileID: 114388032907952476}
+  - component: {fileID: 114950929422324110}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -119,7 +118,7 @@ MonoBehaviour:
   speed: 2
   lookAtPlayer: 0
   useSide: 3
---- !u!114 &114439806730397394
+--- !u!114 &114950929422324110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,32 +126,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854780990630750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdab9334f9a2a4efe8c019b5d37595cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 114628673277768950}
-  useCustomActions: 0
-  customActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  happenOnlyOnce: 0
-  filterByTag: 1
-  filterTag: Player
---- !u!114 &114628673277768950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854780990630750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2d01f36b24b4a098b250d65a68a92f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelName: 0
+  healthChange: -1
 --- !u!212 &212367473912541268
 SpriteRenderer:
   m_ObjectHideFlags: 1

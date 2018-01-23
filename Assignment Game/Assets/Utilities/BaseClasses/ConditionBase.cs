@@ -40,6 +40,11 @@ public abstract class ConditionBase : MonoBehaviour
 		bool actionResult;
 		foreach(Action ga in actions)
 		{
+			if(ga == null)
+			{
+				continue;
+			}
+					
 			actionResult = ga.ExecuteAction(dataObject);
 			if(actionResult == false)
 			{
