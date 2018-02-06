@@ -22,14 +22,20 @@ public class FollowPlayer : Physics2DObject
 	void Start ()
 	{
 		// Find the player in the scene and store a reference for later use
-		playerTransform = GameObject.FindGameObjectWithTag(targetPlayer.ToString()).transform;
+		if(GameObject.FindGameObjectWithTag("Player") != null){
+			playerTransform = GameObject.FindGameObjectWithTag(targetPlayer.ToString()).transform;
+		}
+
 	}
 
 	// FixedUpdate is called once per frame
 	void FixedUpdate ()
 	{
 		//Move towards the player
-		rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+		if(GameObject.FindGameObjectWithTag("Player") != null){
+			rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+		}
+
 
 		//look towards the player
 		if(lookAtPlayer)

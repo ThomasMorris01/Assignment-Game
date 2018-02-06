@@ -56,6 +56,7 @@ public class HealthSystemAttribute : MonoBehaviour
 			
 		health += amount;
 
+
 		// Notify the UI so it will change the number in the corner
 		if(ui != null
 			&& playerNumber != -1)

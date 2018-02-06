@@ -18,14 +18,5 @@ public class ModifyHealthAttribute : MonoBehaviour
 			healthScript.ModifyHealth(healthChange);
 		}
 	}
-
-	private void OnTriggerEnter2D(Collider2D colliderData)
-	{
-		HealthSystemAttribute healthScript = colliderData.gameObject.GetComponent<HealthSystemAttribute>();
-		if(healthScript != null)
-		{
-			// subtract health from the player
-			healthScript.ModifyHealth(healthChange);
-		}
-	}
+		
 }
